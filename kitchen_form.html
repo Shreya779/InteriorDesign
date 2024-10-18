@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Room Dimensions Form</title>
+    <link rel="stylesheet" href="form.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <form action="/submitKitchen" method="POST">
+        <!-- Width -->
+        <div id="dimensions-form">
+            <h1>Dimensions of Room</h1>
+            <img src="IMG/Room_Dimensions_rev02.jpg" length="100px" width="150px">
+            <label for="width">Width:</label>
+            <input type="range" id="width" name="width" min="0" max="50">
+            <input type="number" id="width-input" name="width_input" min="0" max="50">
+            <span id="width-value"> ft</span><br>
+            <label for="length">Length:</label>
+            <input type="range" id="length" name="length" min="0" max="50">
+            <input type="number" id="length-input" name="length_input" min="0" max="50">
+            <span id="length-value"> ft</span><br>
+            <button type="button" id="next-dimension-button1"><a href="form2.html" style="color: white;text-decoration: none;">Back</a></button>
+            <button type="button" id="next-dimension-button" onclick="showNext('sofa-selection')">Next</button>
+        </div>
+        <!-- Sofa selection section-->
+        <div id="sofa-selection" style="display:none;">
+            <h2>Bedroom Room Requirements</h2>
+            <h3>1. Select Bed Type You Want</h3>
+            <label for="sofaType"></label>
+            <div class="option">
+                <div class="sofa-option">
+                    <label>
+                        <img src="IMG/Straight Kitchen.jpeg" alt="King Size Bed" />
+                        <input type="radio" name="sofaType" value="Straight Kitchen" />
+                        Straight Kitchen
+                    </label>
+                </div>
+                <div class="sofa-option">
+                    <label>
+                        <img src="IMG/Parallel Kitchen.jpeg" alt="Queen Size Bed" />
+                        <input type="radio" name="sofaType" value="Parallel Kitchen" />
+                        Parallel Kitchen
+                    </label>
+                </div>
+                <div class="sofa-option">
+                    <label>
+                        <img src="IMG/L-Shape Kitchen.avif" alt="Full Size Bed" />
+                        <input type="radio" name="sofaType" value="L-Shape Kitchen" />
+                        L-Shape Kitchen
+                    </label>
+                </div>
+            </div>
+            <button type="button" onclick="showPrev('dimensions-form')">
+                Back
+            </button>
+            <button type="button" id="next-sofa-button" onclick="showNext('furniture-selection')">
+                Next
+            </button>
+        </div> 
+
+        <!-- Furniture -->
+        <div id="furniture-selection" style="display:none;">
+            <h2>Platform Tops</h2>
+            <h3>2. Platform Tops</h3>
+            <label for="furniture">Choose Furniture:</label><br />
+            <div class="option">
+                <div class="furniture-option">
+                    <label>
+                        <img src="IMG/Granite Stone Top.jpeg" alt="Shoe Rack" />
+                        <input type="checkbox" name="furniture" value="Granite Stone Top" />
+                        Granite Stone Top
+                    </label>
+                </div>
+                <div class="furniture-option">
+                    <label>
+                        <img src="IMG/Quartz Stone Top.webp" alt="Side Table" />
+                        <input type="checkbox" name="furniture" value="Quartz Stone Top" />
+                        Quartz Stone Top
+                    </label>
+                </div>
+                <div class="furniture-option">
+                    <label>
+                        <img src="Design Your Interiors_files/005(1).png" alt="Center Table" />
+                        <input type="checkbox" name="furniture" value="Stainless Steel Top" />
+                        Stainless Steel Top
+                    </label>
+                </div>
+                <div class="furniture-option">
+                    <label>
+                        <img src="IMG/Marble.jpeg" alt="TV Unit" />
+                        <input type="checkbox" name="furniture" value="Marble" />
+                        Marble
+                    </label>
+                </div>
+            </div>
+            <button type="button" onclick="showPrev('sofa-selection')">Back</button>
+            <button type="button" id="next-furniture-button" onclick="showNext('lighting-selection')">
+                Next
+            </button>
+        </div>
+
+        <!-- Lighting selection section -->
+        <div id="lighting-selection" style="display:none;">
+            <h2>Units Choices</h2>
+            <h3>3. Units Choices</h3>
+            <label for="lighting">Choose Flooring:</label><br/>
+            <div class="option">
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/Overhead Units.jpeg" alt="Table Lamp" />
+                        <input type="checkbox" name="lighting" value="Overhead Units" />
+                        Overhead Units
+                    </label>
+                </div>
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/Loft Units.jpeg" alt="Floor Lamp" />
+                        <input type="checkbox" name="lighting" value="Loft Units" />
+                        Loft Units
+                    </label>
+                </div>
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/Drawer Pack.avif" alt="Ceiling Lighting" />
+                        <input type="checkbox" name="lighting" value="Drawer Pack" />
+                        Drawer Pack
+                    </label>
+                </div>
+                <div class="lighting-option">
+                    <label>
+                        <img src="IMG/Corner Base.jpeg" alt="Chandelier" />
+                        <input type="checkbox" name="lighting" value="Corner Base" />
+                        Corner Base
+                    </label>
+                </div>
+            </div>
+            <button type="button" onclick="showPrev('furniture-selection')">
+                Back
+            </button>
+            <button type="button" id="next-lighting-button" onclick="showNext('paint-selection')">
+                Next
+            </button>
+        </div>
+
+        <!-- Wall Paint -->
+        <div id="paint-selection" style="display: none">
+            <h2>Kitchen Requirements</h2>
+            <h3>4. Paint</h3>
+            <label for="paint">Choose Wall Paint:</label>
+            <input type="color" name="paint" id="paint" required />
+            <button type="button" onclick="showPrev('lighting-selection')">
+                Back
+            </button>
+            <input type="submit" value="Submit" />
+        </div>
+    </form>
+
+    <script src="kitchen.js"></script>
+</body>
+
+</html>
