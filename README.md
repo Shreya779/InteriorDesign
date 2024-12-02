@@ -1,3 +1,0 @@
-# InteriorDesign
-# AIDesigner
-# InteriorDesign
