@@ -1,5 +1,11 @@
 # Roomcraft-Interior_Design_Website
-Welcome to Roomcraft Website!  it’s a website that brings your interior design ideas to life. With a user-friendly interface and a wide range of options, users can customize their design preferences to create their dream space.
+The Interior Design Generator is a web-based application built using Streamlit that leverages the power of Stable Diffusion to generate stunning interior design ideas. This project empowers users to create personalized designs based on their preferences or redesign existing spaces using uploaded images and descriptive prompts.
+
+## Technology Stack
+Frontend: Streamlit
+Backend & AI Model: Stable Diffusion
+Libraries: PIL, diffusers
+Languages: Python
 
 ## Installation
 
@@ -10,9 +16,14 @@ Welcome to Roomcraft Website!  it’s a website that brings your interior design
 ```
 also download node.js 
 
+## Requirements
+Create a kinde authentication key and an acess key on web3forms
+
 ## Deployment
 
 To deploy this project run
+nodemon index.js on one terminal
+and streamlit run model.py on another terminal
 
 ```bash
   node server.js
