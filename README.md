@@ -22,9 +22,14 @@ Create a kinde authentication key and an acess key on web3forms
 ## Deployment
 
 To deploy this project run
-nodemon index.js on one terminal
-and streamlit run model.py on another terminal
-
 ```bash
-  node server.js
+nodemon index.js
 ```
+on one terminal
+and
+```bash
+streamlit run model.py
+```
+ on another terminal
+
+
