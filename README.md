@@ -14,6 +14,9 @@ Languages: Python
 ```bash
   pip install -r requirements.txt
 ```
+```bash
+  npm install
+```
 also download node.js 
 
 ## Requirements
